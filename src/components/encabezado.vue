@@ -1,4 +1,5 @@
 <script setup>
+import carritoVue from './carrito.vue';
 </script>
 <template>
     <div class="row" id="encabezado">
@@ -9,7 +10,7 @@
             <button class="btn btn-outline-light" type="submit">Buscar</button>
             </form>
         </div>
-        <div class="col item"><span class="material-symbols-outlined">shopping_cart</span><span id="monto">0.00 Bs</span></div>
+        <carritoVue></carritoVue>
         <div class="col item"><span class="material-symbols-outlined">person </span><span id="usuario">Iniciar Sesión</span></div>
     </div>
 </template>
@@ -19,6 +20,7 @@
         color: white;
         font-size: 20px;
         padding: 2%;
+        margin-right: 0%;
     }
     #monto,#usuario{
         font-size: 18px;
