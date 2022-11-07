@@ -1,50 +1,69 @@
 <script setup>
-import encabezadoVue from './components/encabezado.vue';
-import barra from './components/barra.vue';
-import tarjetaVue from './components/tarjeta.vue';
-import detalle_pedidoVue from './components/detalle_pedido.vue';
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
-<encabezadoVue></encabezadoVue>
-<div id="barras">
-    <barra titulo="Novedades">
-    </barra><br>
-    <div class="contenedor_tarjetas row">
-        <tarjetaVue precio="4000" titulo="compu1" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
-        <tarjetaVue precio="1000" titulo="compu2" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
-        <tarjetaVue precio="2000" titulo="compu3" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
-        <tarjetaVue precio="3000" titulo="compu4" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
-    </div>
-    <barra titulo="Lo mas vendido"></barra>
-    <barra titulo="Laptops"></barra>
-    <barra titulo="Componentes"></barra>
-</div>
-<detalle_pedidoVue></detalle_pedidoVue>
+      <RouterView />
 </template>
-
 <style scoped>
-.linea{
-    height: 2px;
-    color: aliceblue;
-    background-color: white;
+header {
+  line-height: 1.5;
+  max-height: 100vh;
 }
-#pagar{
-    display: block;
-    height: 30px;
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
 }
-.contenedor_tarjetas{
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 2%;
-    width: 100%;
+
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
 }
-</style>
-<style>
-.btn_eliminar{
-    font-size: 20px;
-    color: rgb(205, 16, 16);
-    background-color: white;
-    border: solid black 0px;
-    margin-left: 10%;
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 }
 </style>
