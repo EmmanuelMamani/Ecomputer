@@ -12,10 +12,10 @@ import detalle_pedidoVue from '../components/detalle_pedido.vue';
     <barra titulo="Novedades">
     </barra><br>
     <div class="contenedor_tarjetas row">
-        <tarjetaVue precio="5000" titulo="compu" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
-        <tarjetaVue precio="5000" titulo="compu" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
-        <tarjetaVue precio="5000" titulo="compu" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
-        <tarjetaVue precio="5000" titulo="compu" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
+        <tarjetaVue precio="1000" titulo="compu1" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
+        <tarjetaVue precio="2000" titulo="compu2" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
+        <tarjetaVue precio="3000" titulo="compu3" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
+        <tarjetaVue precio="4000" titulo="compu4" imagen="https://www.notebookcheck.org/typo3temp/_processed_/3/c/csm_case11_af5c4e2ddb.jpg"></tarjetaVue>
     </div>
     <barra titulo="Lo mas vendido"></barra>
     <barra titulo="Laptops"></barra>

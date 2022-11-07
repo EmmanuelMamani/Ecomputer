@@ -47,8 +47,8 @@ export default{
                     cantidad_item.className="col"
                     cantidad_item.innerHTML=this.cantidad
                     var subtotal=document.createElement("div")
-                    subtotal.className="col"
-                    subtotal.innerHTML= this.cantidad * parseFloat(this.precio)
+                    subtotal.className="col subtotal"
+                    subtotal.innerHTML= this.cantidad * parseFloat(this.precio) + " Bs"
                     itempedido.appendChild(Nombre)
                     itempedido.appendChild(precio_item)
                     itempedido.appendChild(cantidad_item)
@@ -65,15 +65,28 @@ export default{
                     btn_eliminar.parentNode.parentNode.parentNode.removeChild(btn_eliminar.parentNode.parentNode)
                     }
                 }else{
-                    console.log("hola");;
+                    var con_monto=document.getElementById('monto');
+                    var monto = parseFloat(con_monto.innerHTML.split(" ")[0])
+                    var total= monto - item.childNodes[3].innerHTML.split(" ")[0];
+                    con_monto.innerHTML=total+" Bs"
+                    item.childNodes[2].innerHTML=this.cantidad;
+                    item.childNodes[3].innerHTML=this.cantidad * this.precio+ " Bs"
+                    total+=this.cantidad * this.precio
+                    con_monto.innerHTML=total+" Bs"
                 }
             }
+        },
+        verDetalles(){
+            this.$el.lastChild.show();
+        },
+        cerrar(){
+            this.$el.lastChild.close();
         }
     }
 }
 </script>
 <template>
-    <div class="contenedor_tarjeta">
+    <div class="contenedor_tarjeta" v-on:click="verDetalles">
         <h4 class="titulo_tarjeta">{{titulo}}</h4>
         <img v-bind:src="imagen" alt="" class="imagen_tarjeta">
         <h5 class="precio_tarjeta">{{precio}} Bs.</h5>
@@ -81,9 +94,52 @@ export default{
         <span class="cantidad" >{{cantidad}}</span>
         <button class="btn_sumar material-symbols-outlined" v-on:click="aumentar">add</button>
         <button class="btn_añadir" v-on:click="añadir">Añadir</button>
+        <dialog class="detalles_articulo">
+            <button class="material-symbols-outlined cerrar" v-on:click="cerrar">close</button>
+            <h3>{{titulo}}</h3>
+            <div class="row">
+                <div class="col-4">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, omnis nihil. Inventore, cum libero in quo maxime id accusamus asperiores animi? Velit earum, in tempora dolor sequi sint harum officia.
+            </div>
+            <div class="col">
+                    <model-viewer src="src\assets\img\mother_board.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls  shadow-intensity="1">
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                    <button slot="ar-button" id="ar-button">
+                        View in your space
+                    </button>
+                </model-viewer>
+            </div>
+            </div>
+        </dialog>
     </div>
 </template>
 <style scoped>
+model-viewer{
+    width: 500px;
+    height:500px;
+    margin: auto;
+}
+h3{
+    text-align: center;
+}
+.cerrar{
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    margin-left: 93%;
+}
+.cerrar:hover{
+    background-color: red;
+}
+.detalles_articulo{
+    width: 80%;
+    height: 80%;
+    top: 15%;
+}
 .contenedor_tarjeta{
     width: 20%;
     border: solid black 1px;

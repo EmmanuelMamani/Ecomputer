@@ -10,7 +10,7 @@
 </script>
 <template>
     <dialog id="detalle_carrito">
-        <button class="material-symbols-outlined" id="cerrar" v-on:click="cerrar">close</button>
+        <button class="material-symbols-outlined cerrar" v-on:click="cerrar">close</button>
        <h3>Detalle del pedido</h3>
        <div class="row">
             <div class="col">Producto</div>
@@ -24,7 +24,7 @@
        <hr>
        <div class="row">
             <div class="col-6">El monto total a pagar es </div>
-            <div id="total" class="col">100 Bs</div><br><br>
+            <div id="total" class="col">0</div><br><br>
        </div>
        <button id="pagar">Pagar</button>
     </dialog>
@@ -45,7 +45,7 @@ h3{
     background-color: rgb(25, 25, 100);
     color: white;
 }
-#cerrar{
+.cerrar{
     width: 30px;
     height: 30px;
     font-size: 16px;

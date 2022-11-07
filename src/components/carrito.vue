@@ -4,6 +4,13 @@ export default{
         abierto(){
            var detalle=document.getElementById("detalle_carrito")
                 detalle.show()
+            var total=document.getElementById("total")
+            var subtotales=document.getElementsByClassName("subtotal")
+            var suma=0;
+            for (var i=0; i<subtotales.length; i++){
+                suma+=parseFloat(subtotales[i].innerHTML.split(" ")[0])
+            }
+            total.innerHTML=suma+" Bs"
             }
         }
     }
