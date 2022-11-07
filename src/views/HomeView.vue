@@ -3,6 +3,7 @@
 import encabezadoVue from '../components/encabezado.vue';
 import barra from '../components/barra.vue';
 import tarjetaVue from '../components/tarjeta.vue';
+import detalle_pedidoVue from '../components/detalle_pedido.vue';
 </script>
 
 <template>

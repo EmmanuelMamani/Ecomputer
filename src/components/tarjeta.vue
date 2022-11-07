@@ -65,7 +65,7 @@ export default{
                     btn_eliminar.parentNode.parentNode.parentNode.removeChild(btn_eliminar.parentNode.parentNode)
                     }
                 }else{
-                    console.log(item.childNodes);
+                    console.log("hola");;
                 }
             }
         }
