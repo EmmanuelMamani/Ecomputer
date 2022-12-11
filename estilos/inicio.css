@@ -1,0 +1,86 @@
+body{
+    background-image: url("../img/fondo.png");
+    height: 99vh;
+    background-size: cover;
+    background-position: center;
+}
+#sesion {
+    background: #FBCA1F;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+   }
+   
+   #sesion:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+   }
+   
+   #sesion:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+   }
+#formulario,#registrarse{
+    position: absolute;
+    width: 36%;
+    height: 400px;
+    background-color: rgb(255 255 255 / 90%);
+    border: black solid 2px;
+    top: 23%;
+    left: 32%;
+    border-radius: 30px;
+    padding: 2%;
+    color: saddlebrown;
+    display: none;
+}
+.btn{
+    background-color: #ffcbcb;
+    color: saddlebrown;
+    font-size: 20px;
+    border: saddlebrown 2px solid;
+    width: 100%;
+    margin-top: 3%;
+}
+.form-control{
+    background-color: #ee9898;
+}
+h1{
+    text-align: center;
+}
+.btn:hover{
+    background-color: saddlebrown;
+    color: white;
+}
+
+#closedL,#closedR {
+    border-radius: 999px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    padding: 1%;
+    background: linear-gradient(117deg, rgb(254, 92, 80), rgb(246, 57, 44));
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: box-shadow 0.25s ease 0s;
+    letter-spacing: 0.08rem;
+    margin-left: 85%;
+   }
+   
+   #closedL:hover,
+   #closedL:focus,#closedR:hover,
+   #closedR:focus{
+    background: linear-gradient(117deg, rgb(248, 137, 73), rgb(248, 82, 49));
+    box-shadow: 0 0.1rem 0.8rem rgb(254, 100, 70);
+   }
