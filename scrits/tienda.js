@@ -811,7 +811,7 @@ AFRAME.registerComponent('aniadir11', {
 init: function () {
     this.el.addEventListener('click', () => {
       var cont =parseInt(document.getElementById('GC11').getAttribute("value"))
-      var texto= "DIMM\t"+cont+"\t7800Bs\t"+cont*780+" bs"
+      var texto= "DIMM\t"+cont+"\t780Bs\t"+cont*780+" bs"
     console.log(texto);
     var componente=document.getElementById("DIMM")
     if(componente == null){
@@ -1227,7 +1227,7 @@ AFRAME.registerComponent('aumento15', {
         this.el.addEventListener('click', () => {
           var cont =parseInt(document.getElementById('GC17').getAttribute("value"))
           if(cont != 0){
-            cont = parseInt(document.getElementById('GC7').getAttribute("value"))-1
+            cont = parseInt(document.getElementById('GC17').getAttribute("value"))-1
           }
           document.getElementById('GC17').setAttribute('value', cont)
         })
@@ -1281,4 +1281,658 @@ AFRAME.registerComponent('aumento15', {
         })
       }
       })
+
+
+      AFRAME.registerComponent('enviar', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var message = `Muy buenas quisiera adquirir el siguiente producto`;
+            message += `%0a%0a*Articulo:* Asus Zenbook`;
+            message += `%0a%0a*Unidad:* 1`;
+            message += `%0a%0a*Precio:* 1200`;
+            window.open(`https://api.whatsapp.com/send?phone=${60797901}&text=${message}`, '_system');
+          })
+        }
+      })
+
+
+  //----------------------------------------------
+     //Primer articulo I
+     AFRAME.registerComponent('aumento18', {
+      init: function () {
+          this.el.addEventListener('click', () => {
+            var cont = parseInt(document.getElementById('GC18').getAttribute("value"))+1
+            document.getElementById('GC18').setAttribute('value', cont)
+          })
+      }
+  })
+  
+  AFRAME.registerComponent('disminucion18', {
+    init: function () {
+        this.el.addEventListener('click', () => {
+          var cont =parseInt(document.getElementById('GC18').getAttribute("value"))
+          if(cont != 0){
+            cont = parseInt(document.getElementById('GC18').getAttribute("value"))-1
+          }
+          document.getElementById('GC18').setAttribute('value', cont)
+        })
+    }
+  })
+  
+  AFRAME.registerComponent('aniadir18', {
+    init: function () {
+        this.el.addEventListener('click', () => {
+          var cont =parseInt(document.getElementById('GC19').getAttribute("value"))
+          var texto= "lenovo S540\t"+cont+"\t12000Bs\t"+cont*12000+" bs"
+        console.log(texto);
+        var componente=document.getElementById("lenovoS540")
+        if(componente == null){
+          var item = document.createElement('a-text')
+          item.setAttribute("value", texto)
+          item.setAttribute('class', 'items')
+          item.setAttribute("color", "#000000")
+          item.setAttribute("id", "lenovoS540")
+          item.setAttribute("width",0.9)
+          item.object3D.position.set(-0.3, -3, 1.4)
+          var items=document.getElementById("items")
+          items.appendChild(item)
+          var btn = document.createElement("a-entity")
+          btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+          btn.setAttribute("class", "eliminar")
+          btn.setAttribute("quitar18", "")
+          btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+          items.appendChild(btn)
+        }else{
+          componente.setAttribute("value", texto)
+        }
+        })
+    }
+  })
+  
+  AFRAME.registerComponent('quitar18', {
+    init: function () {
+        this.el.addEventListener('click', () => {
+          var items=document.getElementById("items") 
+          var item=document.getElementById("lenovoS540")
+          items.removeChild(item)
+          items.removeChild(this.el)
+          var items = document.getElementsByClassName("items")
+          var precio=0
+          for(var i=0; i<items.length; i++){
+            precio+=parseInt(items[i].getAttribute("value").split("\t")[3].split(" ")[0])
+          }
+          var total=document.getElementById("total")
+            total.setAttribute('value', "Total:\t\t\t\t\t\t"+precio+" Bs")
+        })
+    }
+  })
+  
+  // Segundo item
+  
+  AFRAME.registerComponent('aumento19', {
+    init: function () {
+        this.el.addEventListener('click', () => {
+          var cont = parseInt(document.getElementById('GC19').getAttribute("value"))+1
+          document.getElementById('GC19').setAttribute('value', cont)
+        })
+    }
+  })
+  
+  AFRAME.registerComponent('disminucion19', {
+  init: function () {
+      this.el.addEventListener('click', () => {
+        var cont =parseInt(document.getElementById('GC19').getAttribute("value"))
+        if(cont != 0){
+          cont = parseInt(document.getElementById('GC19').getAttribute("value"))-1
+        }
+        document.getElementById('GC19').setAttribute('value', cont)
+      })
+  }
+  })
+  
+  AFRAME.registerComponent('aniadir19', {
+  init: function () {
+      this.el.addEventListener('click', () => {
+        var cont =parseInt(document.getElementById('GC19').getAttribute("value"))
+        var texto= "Lenovo IDEA\t"+cont+"\t10650Bs\t"+cont*10650+" bs"
+      console.log(texto);
+      var componente=document.getElementById("LenovoIDEA")
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "LenovoIDEA")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar19", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
+      })
+  }
+  })
+  
+  AFRAME.registerComponent('quitar19', {
+  init: function () {
+      this.el.addEventListener('click', () => {
+        var items=document.getElementById("items") 
+        var item=document.getElementById("LenovoIDEA")
+        items.removeChild(item)
+        items.removeChild(this.el)
+        var items = document.getElementsByClassName("items")
+          var precio=0
+          for(var i=0; i<items.length; i++){
+            precio+=parseInt(items[i].getAttribute("value").split("\t")[3].split(" ")[0])
+          }
+          var total=document.getElementById("total")
+            total.setAttribute('value', "Total:\t\t\t\t\t\t"+precio+" Bs")
+      })
+  }
+  })
+  
+  //Tercer item
+  
+  AFRAME.registerComponent('aumento20', {
+    init: function () {
+        this.el.addEventListener('click', () => {
+          var cont = parseInt(document.getElementById('GC20').getAttribute("value"))+1
+          document.getElementById('GC20').setAttribute('value', cont)
+        })
+    }
+  })
+  
+  AFRAME.registerComponent('disminucion20', {
+  init: function () {
+      this.el.addEventListener('click', () => {
+        var cont =parseInt(document.getElementById('GC20').getAttribute("value"))
+        if(cont != 0){
+          cont = parseInt(document.getElementById('GC20').getAttribute("value"))-1
+        }
+        document.getElementById('GC20').setAttribute('value', cont)
+      })
+  }
+  })
+  
+  AFRAME.registerComponent('aniadir20', {
+  init: function () {
+      this.el.addEventListener('click', () => {
+        var cont =parseInt(document.getElementById('GC20').getAttribute("value"))
+        var texto= "Lenovo YOGA\t"+cont+"\t13050Bs\t"+cont*13050+" bs"
+      console.log(texto);
+      var componente=document.getElementById("LenovoYOGA")
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "LenovoYOGA")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar20", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
+      })
+  }
+  })
+  
+  AFRAME.registerComponent('quitar20', {
+  init: function () {
+      this.el.addEventListener('click', () => {
+        var items=document.getElementById("items") 
+        var item=document.getElementById("LenovoYOGA")
+        items.removeChild(item)
+        items.removeChild(this.el)
+        var items = document.getElementsByClassName("items")
+          var precio=0
+          for(var i=0; i<items.length; i++){
+            precio+=parseInt(items[i].getAttribute("value").split("\t")[3].split(" ")[0])
+          }
+          var total=document.getElementById("total")
+            total.setAttribute('value', "Total:\t\t\t\t\t\t"+precio+" Bs")
+      })
+  }
+  })
+  
+  
+   //cuarto articulo
+   AFRAME.registerComponent('aumento21', {
+    init: function () {
+        this.el.addEventListener('click', () => {
+          var cont = parseInt(document.getElementById('GC21').getAttribute("value"))+1
+          document.getElementById('GC21').setAttribute('value', cont)
+        })
+    }
+  })
+  
+  AFRAME.registerComponent('disminucion21', {
+  init: function () {
+      this.el.addEventListener('click', () => {
+        var cont =parseInt(document.getElementById('GC21').getAttribute("value"))
+        if(cont != 0){
+          cont = parseInt(document.getElementById('GC21').getAttribute("value"))-1
+        }
+        document.getElementById('GC21').setAttribute('value', cont)
+      })
+  }
+  })
+  
+  AFRAME.registerComponent('aniadir21', {
+  init: function () {
+      this.el.addEventListener('click', () => {
+        var cont =parseInt(document.getElementById('GC21').getAttribute("value"))
+        var texto= "HP Pavilion\t"+cont+"\t8600Bs\t"+cont*8600+" bs"
+      console.log(texto);
+      var componente=document.getElementById("HPPavilion")
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "HPPavilion")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar21", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
+      })
+  }
+  })
+  
+  AFRAME.registerComponent('quitar21', {
+  init: function () {
+      this.el.addEventListener('click', () => {
+        var items=document.getElementById("items") 
+        var item=document.getElementById("HPPavilion")
+        items.removeChild(item)
+        items.removeChild(this.el)
+        var items = document.getElementsByClassName("items")
+        var precio=0
+        for(var i=0; i<items.length; i++){
+          precio+=parseInt(items[i].getAttribute("value").split("\t")[3].split(" ")[0])
+        }
+        var total=document.getElementById("total")
+          total.setAttribute('value', "Total:\t\t\t\t\t\t"+precio+" Bs")
+      })
+  }
+  })
+  
+  // Quinto item
+  
+  AFRAME.registerComponent('aumento22', {
+  init: function () {
+      this.el.addEventListener('click', () => {
+        var cont = parseInt(document.getElementById('GC22').getAttribute("value"))+1
+        document.getElementById('GC22').setAttribute('value', cont)
+      })
+  }
+  })
+  
+  AFRAME.registerComponent('disminucion22', {
+  init: function () {
+    this.el.addEventListener('click', () => {
+      var cont =parseInt(document.getElementById('GC22').getAttribute("value"))
+      if(cont != 0){
+        cont = parseInt(document.getElementById('GC22').getAttribute("value"))-1
+      }
+      document.getElementById('GC22').setAttribute('value', cont)
+    })
+  }
+  })
+  
+  AFRAME.registerComponent('aniadir22', {
+  init: function () {
+    this.el.addEventListener('click', () => {
+      var cont =parseInt(document.getElementById('GC22').getAttribute("value"))
+      var texto= "Acer Aspire 3\t"+cont+"\t12300Bs\t"+cont*12300+" bs"
+    console.log(texto);
+    var componente=document.getElementById("AcerAspire3")
+    if(componente == null){
+      var item = document.createElement('a-text')
+      item.setAttribute("value", texto)
+      item.setAttribute('class', 'items')
+      item.setAttribute("color", "#000000")
+      item.setAttribute("id", "AcerAspire3")
+      item.setAttribute("width",0.9)
+      item.object3D.position.set(-0.3, -3, 1.4)
+      var items=document.getElementById("items")
+      items.appendChild(item)
+      var btn = document.createElement("a-entity")
+      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+      btn.setAttribute("class", "eliminar")
+      btn.setAttribute("quitar22", "")
+      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+      items.appendChild(btn)
+    }else{
+      componente.setAttribute("value", texto)
+    }
+    })
+  }
+  })
+  
+  AFRAME.registerComponent('quitar22', {
+  init: function () {
+    this.el.addEventListener('click', () => {
+      var items=document.getElementById("items") 
+      var item=document.getElementById("AcerAspire3")
+      items.removeChild(item)
+      items.removeChild(this.el)
+      var items = document.getElementsByClassName("items")
+        var precio=0
+        for(var i=0; i<items.length; i++){
+          precio+=parseInt(items[i].getAttribute("value").split("\t")[3].split(" ")[0])
+        }
+        var total=document.getElementById("total")
+          total.setAttribute('value', "Total:\t\t\t\t\t\t"+precio+" Bs")
+    })
+  }
+  })
+  
+  //Sexto item
+  
+  AFRAME.registerComponent('aumento23', {
+  init: function () {
+      this.el.addEventListener('click', () => {
+        var cont = parseInt(document.getElementById('GC23').getAttribute("value"))+1
+        document.getElementById('GC23').setAttribute('value', cont)
+      })
+  }
+  })
+  
+  AFRAME.registerComponent('disminucion23', {
+  init: function () {
+    this.el.addEventListener('click', () => {
+      var cont =parseInt(document.getElementById('GC23').getAttribute("value"))
+      if(cont != 0){
+        cont = parseInt(document.getElementById('GC23').getAttribute("value"))-1
+      }
+      document.getElementById('GC23').setAttribute('value', cont)
+    })
+  }
+  })
+  
+  AFRAME.registerComponent('aniadir23', {
+  init: function () {
+    this.el.addEventListener('click', () => {
+      var cont =parseInt(document.getElementById('GC23').getAttribute("value"))
+      var texto= "MSI GF63 THIN\t"+cont+"\t9680Bs\t"+cont*9680+" bs"
+    console.log(texto);
+    var componente=document.getElementById("MSIGF63THIN")
+    if(componente == null){
+      var item = document.createElement('a-text')
+      item.setAttribute("value", texto)
+      item.setAttribute('class', 'items')
+      item.setAttribute("color", "#000000")
+      item.setAttribute("id", "MSIGF63THIN")
+      item.setAttribute("width",0.9)
+      item.object3D.position.set(-0.3, -3, 1.4)
+      var items=document.getElementById("items")
+      items.appendChild(item)
+      var btn = document.createElement("a-entity")
+      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+      btn.setAttribute("class", "eliminar")
+      btn.setAttribute("quitar23", "")
+      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+      items.appendChild(btn)
+    }else{
+      componente.setAttribute("value", texto)
+    }
+    })
+  }
+  })
+  
+  AFRAME.registerComponent('quitar23', {
+  init: function () {
+    this.el.addEventListener('click', () => {
+      var items=document.getElementById("items") 
+      var item=document.getElementById("MSIGF63THIN")
+      items.removeChild(item)
+      items.removeChild(this.el)
+      var items = document.getElementsByClassName("items")
+        var precio=0
+        for(var i=0; i<items.length; i++){
+          precio+=parseInt(items[i].getAttribute("value").split("\t")[3].split(" ")[0])
+        }
+        var total=document.getElementById("total")
+          total.setAttribute('value', "Total:\t\t\t\t\t\t"+precio+" Bs")
+    })
+  }
+  })
+  
+  
+  // septimo item
+  
+  AFRAME.registerComponent('aumento24', {
+    init: function () {
+        this.el.addEventListener('click', () => {
+          var cont = parseInt(document.getElementById('GC24').getAttribute("value"))+1
+          document.getElementById('GC24').setAttribute('value', cont)
+        })
+    }
+    })
+    
+    AFRAME.registerComponent('disminucion24', {
+    init: function () {
+      this.el.addEventListener('click', () => {
+        var cont =parseInt(document.getElementById('GC24').getAttribute("value"))
+        if(cont != 0){
+          cont = parseInt(document.getElementById('GC24').getAttribute("value"))-1
+        }
+        document.getElementById('GC24').setAttribute('value', cont)
+      })
+    }
+    })
+    
+    AFRAME.registerComponent('aniadir24', {
+    init: function () {
+      this.el.addEventListener('click', () => {
+        var cont =parseInt(document.getElementById('GC24').getAttribute("value"))
+        var texto= "Surface Pro 7\t"+cont+"\t10900Bs\t"+cont*10900+" bs"
+      console.log(texto);
+      var componente=document.getElementById("SurfacePro7")
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "SurfacePro7")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar24", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
+      })
+    }
+    })
+    
+    AFRAME.registerComponent('quitar24', {
+    init: function () {
+      this.el.addEventListener('click', () => {
+        var items=document.getElementById("items") 
+        var item=document.getElementById("SurfacePro7")
+        items.removeChild(item)
+        items.removeChild(this.el)
+        var items = document.getElementsByClassName("items")
+          var precio=0
+          for(var i=0; i<items.length; i++){
+            precio+=parseInt(items[i].getAttribute("value").split("\t")[3].split(" ")[0])
+          }
+          var total=document.getElementById("total")
+            total.setAttribute('value', "Total:\t\t\t\t\t\t"+precio+" Bs")
+      })
+    }
+    })
+    
+    //Sexto item
+    
+    AFRAME.registerComponent('aumento25', {
+    init: function () {
+        this.el.addEventListener('click', () => {
+          var cont = parseInt(document.getElementById('GC25').getAttribute("value"))+1
+          document.getElementById('GC25').setAttribute('value', cont)
+        })
+    }
+    })
+    
+    AFRAME.registerComponent('disminucion25', {
+    init: function () {
+      this.el.addEventListener('click', () => {
+        var cont =parseInt(document.getElementById('GC25').getAttribute("value"))
+        if(cont != 0){
+          cont = parseInt(document.getElementById('GC25').getAttribute("value"))-1
+        }
+        document.getElementById('GC25').setAttribute('value', cont)
+      })
+    }
+    })
+    
+    AFRAME.registerComponent('aniadir25', {
+    init: function () {
+      this.el.addEventListener('click', () => {
+        var cont =parseInt(document.getElementById('GC25').getAttribute("value"))
+        var texto= "Toshiba Porterge\t"+cont+"\t11620Bs\t"+cont*11620+" bs"
+      console.log(texto);
+      var componente=document.getElementById("ToshibaPorterge")
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "ToshibaPorterge")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar25", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
+      })
+    }
+    })
+    
+    AFRAME.registerComponent('quitar25', {
+    init: function () {
+      this.el.addEventListener('click', () => {
+        var items=document.getElementById("items") 
+        var item=document.getElementById("ToshibaPorterge")
+        items.removeChild(item)
+        items.removeChild(this.el)
+        var items = document.getElementsByClassName("items")
+          var precio=0
+          for(var i=0; i<items.length; i++){
+            precio+=parseInt(items[i].getAttribute("value").split("\t")[3].split(" ")[0])
+          }
+          var total=document.getElementById("total")
+            total.setAttribute('value', "Total:\t\t\t\t\t\t"+precio+" Bs")
+      })
+    }
+    })
+  
+      //Septo item
+    
+      AFRAME.registerComponent('aumento26', {
+        init: function () {
+            this.el.addEventListener('click', () => {
+              var cont = parseInt(document.getElementById('GC26').getAttribute("value"))+1
+              document.getElementById('GC26').setAttribute('value', cont)
+            })
+        }
+        })
+        
+        AFRAME.registerComponent('disminucion26', {
+        init: function () {
+          this.el.addEventListener('click', () => {
+            var cont =parseInt(document.getElementById('GC26').getAttribute("value"))
+            if(cont != 0){
+              cont = parseInt(document.getElementById('GC26').getAttribute("value"))-1
+            }
+            document.getElementById('GC26').setAttribute('value', cont)
+          })
+        }
+        })
+        
+        AFRAME.registerComponent('aniadir26', {
+        init: function () {
+          this.el.addEventListener('click', () => {
+            var cont =parseInt(document.getElementById('GC26').getAttribute("value"))
+            var texto= "Matebook X Pro\t"+cont+"\t14500Bs\t"+cont*14500+" bs"
+          console.log(texto);
+          var componente=document.getElementById("MatebookXPro")
+          if(componente == null){
+            var item = document.createElement('a-text')
+            item.setAttribute("value", texto)
+            item.setAttribute('class', 'items')
+            item.setAttribute("color", "#000000")
+            item.setAttribute("id", "MatebookXPro")
+            item.setAttribute("width",0.9)
+            item.object3D.position.set(-0.3, -3, 1.4)
+            var items=document.getElementById("items")
+            items.appendChild(item)
+            var btn = document.createElement("a-entity")
+            btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+            btn.setAttribute("class", "eliminar")
+            btn.setAttribute("quitar26", "")
+            btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+            items.appendChild(btn)
+          }else{
+            componente.setAttribute("value", texto)
+          }
+          })
+        }
+        })
+        
+        AFRAME.registerComponent('quitar26', {
+        init: function () {
+          this.el.addEventListener('click', () => {
+            var items=document.getElementById("items") 
+            var item=document.getElementById("MatebookXPro")
+            items.removeChild(item)
+            items.removeChild(this.el)
+            var items = document.getElementsByClassName("items")
+              var precio=0
+              for(var i=0; i<items.length; i++){
+                precio+=parseInt(items[i].getAttribute("value").split("\t")[3].split(" ")[0])
+              }
+              var total=document.getElementById("total")
+                total.setAttribute('value', "Total:\t\t\t\t\t\t"+precio+" Bs")
+          })
+        }
+        })
   
