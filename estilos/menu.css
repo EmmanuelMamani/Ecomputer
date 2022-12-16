@@ -13,8 +13,8 @@
 }
 #opciones{
    margin-top: 2%; 
-   width: 50%;
-   margin-left: 25%;
+   width: 30%;
+   margin-left: 15%;
 }
 .opcion{
     text-align: center;
@@ -37,4 +37,23 @@
     margin-top: 2%;
     margin-left: 10%;
     width: 80%;
+}
+
+#producto{
+    border: 2px solid black;
+    margin-left: 10%;
+    border-radius: 40px;
+    padding: 2%;
+}
+
+.descripcion{
+    margin-left: 10%;
+}
+#usuario{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+#usuario:hover{
+    color: white;
 }
