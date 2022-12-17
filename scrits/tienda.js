@@ -102,24 +102,26 @@ AFRAME.registerComponent('aniadir1', {
         var texto= "Asus ZenBook\t"+cont+"\t12000Bs\t"+cont*12000+" bs"
       console.log(texto);
       var componente=document.getElementById("AsusZenBook")
-      if(componente == null){
-        var item = document.createElement('a-text')
-        item.setAttribute("value", texto)
-        item.setAttribute('class', 'items')
-        item.setAttribute("color", "#000000")
-        item.setAttribute("id", "AsusZenBook")
-        item.setAttribute("width",0.9)
-        item.object3D.position.set(-0.3, -3, 1.4)
-        var items=document.getElementById("items")
-        items.appendChild(item)
-        var btn = document.createElement("a-entity")
-        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-        btn.setAttribute("class", "eliminar")
-        btn.setAttribute("quitar1", "")
-        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-        items.appendChild(btn)
-      }else{
-        componente.setAttribute("value", texto)
+      if(cont > 0){
+        if(componente == null){
+          var item = document.createElement('a-text')
+          item.setAttribute("value", texto)
+          item.setAttribute('class', 'items')
+          item.setAttribute("color", "#000000")
+          item.setAttribute("id", "AsusZenBook")
+          item.setAttribute("width",0.9)
+          item.object3D.position.set(-0.3, -3, 1.4)
+          var items=document.getElementById("items")
+          items.appendChild(item)
+          var btn = document.createElement("a-entity")
+          btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+          btn.setAttribute("class", "eliminar")
+          btn.setAttribute("quitar1", "")
+          btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+          items.appendChild(btn)
+        }else{
+          componente.setAttribute("value", texto)
+        }
       }
       })
   }
@@ -173,24 +175,26 @@ init: function () {
       var texto= "Dell XPS 13\t"+cont+"\t10650Bs\t"+cont*10650+" bs"
     console.log(texto);
     var componente=document.getElementById("DelXPS")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "DelXPS")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar2", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
+    if(cont > 0){
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "DelXPS")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar2", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
     }
     })
 }
@@ -244,24 +248,26 @@ init: function () {
       var texto= "Zephyrus G14\t"+cont+"\t13050Bs\t"+cont*13050+" bs"
     console.log(texto);
     var componente=document.getElementById("Zephyrus")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "Zephyrus")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar3", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
+    if(cont>0){
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "Zephyrus")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar3", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
     }
     })
 }
@@ -315,24 +321,26 @@ init: function () {
       var texto= "Chromebook\t"+cont+"\t8600Bs\t"+cont*8600+" bs"
     console.log(texto);
     var componente=document.getElementById("Chromebook")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "Chromebook")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar4", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
+    if(cont >0){
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "Chromebook")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar4", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
     }
     })
 }
@@ -386,24 +394,26 @@ init: function () {
     var texto= "Think Pad 13\t"+cont+"\t12300Bs\t"+cont*12300+" bs"
   console.log(texto);
   var componente=document.getElementById("Think")
-  if(componente == null){
-    var item = document.createElement('a-text')
-    item.setAttribute("value", texto)
-    item.setAttribute('class', 'items')
-    item.setAttribute("color", "#000000")
-    item.setAttribute("id", "Think")
-    item.setAttribute("width",0.9)
-    item.object3D.position.set(-0.3, -3, 1.4)
-    var items=document.getElementById("items")
-    items.appendChild(item)
-    var btn = document.createElement("a-entity")
-    btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-    btn.setAttribute("class", "eliminar")
-    btn.setAttribute("quitar5", "")
-    btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-    items.appendChild(btn)
-  }else{
-    componente.setAttribute("value", texto)
+  if(cont>0){
+    if(componente == null){
+      var item = document.createElement('a-text')
+      item.setAttribute("value", texto)
+      item.setAttribute('class', 'items')
+      item.setAttribute("color", "#000000")
+      item.setAttribute("id", "Think")
+      item.setAttribute("width",0.9)
+      item.object3D.position.set(-0.3, -3, 1.4)
+      var items=document.getElementById("items")
+      items.appendChild(item)
+      var btn = document.createElement("a-entity")
+      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+      btn.setAttribute("class", "eliminar")
+      btn.setAttribute("quitar5", "")
+      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+      items.appendChild(btn)
+    }else{
+      componente.setAttribute("value", texto)
+    }
   }
   })
 }
@@ -457,24 +467,26 @@ init: function () {
     var texto= "Macbook Air\t"+cont+"\t9680Bs\t"+cont*9680+" bs"
   console.log(texto);
   var componente=document.getElementById("Macbook")
-  if(componente == null){
-    var item = document.createElement('a-text')
-    item.setAttribute("value", texto)
-    item.setAttribute('class', 'items')
-    item.setAttribute("color", "#000000")
-    item.setAttribute("id", "Macbook")
-    item.setAttribute("width",0.9)
-    item.object3D.position.set(-0.3, -3, 1.4)
-    var items=document.getElementById("items")
-    items.appendChild(item)
-    var btn = document.createElement("a-entity")
-    btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-    btn.setAttribute("class", "eliminar")
-    btn.setAttribute("quitar6", "")
-    btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-    items.appendChild(btn)
-  }else{
-    componente.setAttribute("value", texto)
+  if(cont >0 ){
+    if(componente == null){
+      var item = document.createElement('a-text')
+      item.setAttribute("value", texto)
+      item.setAttribute('class', 'items')
+      item.setAttribute("color", "#000000")
+      item.setAttribute("id", "Macbook")
+      item.setAttribute("width",0.9)
+      item.object3D.position.set(-0.3, -3, 1.4)
+      var items=document.getElementById("items")
+      items.appendChild(item)
+      var btn = document.createElement("a-entity")
+      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+      btn.setAttribute("class", "eliminar")
+      btn.setAttribute("quitar6", "")
+      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+      items.appendChild(btn)
+    }else{
+      componente.setAttribute("value", texto)
+    }
   }
   })
 }
@@ -529,24 +541,26 @@ AFRAME.registerComponent('aumento7', {
       var texto= "Surface Pro9\t"+cont+"\t10900Bs\t"+cont*10900+" bs"
     console.log(texto);
     var componente=document.getElementById("Surface")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "Surface")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar7", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
+    if(cont >0){
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "Surface")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar7", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
     }
     })
   }
@@ -600,25 +614,27 @@ AFRAME.registerComponent('aumento7', {
       var texto= "Razer Blade\t"+cont+"\t11620Bs\t"+cont*11620+" bs"
     console.log(texto);
     var componente=document.getElementById("Razer")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "Razer")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar8", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
-    }
+      if(cont >0){
+        if(componente == null){
+          var item = document.createElement('a-text')
+          item.setAttribute("value", texto)
+          item.setAttribute('class', 'items')
+          item.setAttribute("color", "#000000")
+          item.setAttribute("id", "Razer")
+          item.setAttribute("width",0.9)
+          item.object3D.position.set(-0.3, -3, 1.4)
+          var items=document.getElementById("items")
+          items.appendChild(item)
+          var btn = document.createElement("a-entity")
+          btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+          btn.setAttribute("class", "eliminar")
+          btn.setAttribute("quitar8", "")
+          btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+          items.appendChild(btn)
+        }else{
+          componente.setAttribute("value", texto)
+        }
+      }
     })
   }
   })
@@ -672,24 +688,26 @@ AFRAME.registerComponent('aniadir9', {
         var texto= "I5-P058NG\t"+cont+"\t800Bs\t"+cont*800+" bs"
       console.log(texto);
       var componente=document.getElementById("I5-P058NG")
-      if(componente == null){
-        var item = document.createElement('a-text')
-        item.setAttribute("value", texto)
-        item.setAttribute('class', 'items')
-        item.setAttribute("color", "#000000")
-        item.setAttribute("id", "I5-P058NG")
-        item.setAttribute("width",0.9)
-        item.object3D.position.set(-0.3, -3, 1.4)
-        var items=document.getElementById("items")
-        items.appendChild(item)
-        var btn = document.createElement("a-entity")
-        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-        btn.setAttribute("class", "eliminar")
-        btn.setAttribute("quitar9", "")
-        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-        items.appendChild(btn)
-      }else{
-        componente.setAttribute("value", texto)
+      if(cont>0){
+        if(componente == null){
+          var item = document.createElement('a-text')
+          item.setAttribute("value", texto)
+          item.setAttribute('class', 'items')
+          item.setAttribute("color", "#000000")
+          item.setAttribute("id", "I5-P058NG")
+          item.setAttribute("width",0.9)
+          item.object3D.position.set(-0.3, -3, 1.4)
+          var items=document.getElementById("items")
+          items.appendChild(item)
+          var btn = document.createElement("a-entity")
+          btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+          btn.setAttribute("class", "eliminar")
+          btn.setAttribute("quitar9", "")
+          btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+          items.appendChild(btn)
+        }else{
+          componente.setAttribute("value", texto)
+        }
       }
       })
   }
@@ -743,24 +761,26 @@ init: function () {
       var texto= "SIMMS\t"+cont+"\t620Bs\t"+cont*620+" bs"
     console.log(texto);
     var componente=document.getElementById("SIMMS")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "SIMMS")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar10", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
+    if(cont>0){
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "SIMMS")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar10", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
     }
     })
 }
@@ -814,24 +834,26 @@ init: function () {
       var texto= "DIMM\t"+cont+"\t780Bs\t"+cont*780+" bs"
     console.log(texto);
     var componente=document.getElementById("DIMM")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "DIMM")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar11", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
+    if(cont>0){
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "DIMM")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar11", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
     }
     })
 }
@@ -885,24 +907,26 @@ init: function () {
       var texto= "Serial ATA\t"+cont+"\t910Bs\t"+cont*910+" bs"
     console.log(texto);
     var componente=document.getElementById("Serial")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "Serial")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar12", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
+    if(cont >0){
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "Serial")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar12", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
     }
     })
 }
@@ -956,24 +980,26 @@ init: function () {
     var texto= "SCSI\t"+cont+"\t820Bs\t"+cont*820+" bs"
   console.log(texto);
   var componente=document.getElementById("SCSI")
-  if(componente == null){
-    var item = document.createElement('a-text')
-    item.setAttribute("value", texto)
-    item.setAttribute('class', 'items')
-    item.setAttribute("color", "#000000")
-    item.setAttribute("id", "SCSI")
-    item.setAttribute("width",0.9)
-    item.object3D.position.set(-0.3, -3, 1.4)
-    var items=document.getElementById("items")
-    items.appendChild(item)
-    var btn = document.createElement("a-entity")
-    btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-    btn.setAttribute("class", "eliminar")
-    btn.setAttribute("quitar13", "")
-    btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-    items.appendChild(btn)
-  }else{
-    componente.setAttribute("value", texto)
+  if(cont>0){
+    if(componente == null){
+      var item = document.createElement('a-text')
+      item.setAttribute("value", texto)
+      item.setAttribute('class', 'items')
+      item.setAttribute("color", "#000000")
+      item.setAttribute("id", "SCSI")
+      item.setAttribute("width",0.9)
+      item.object3D.position.set(-0.3, -3, 1.4)
+      var items=document.getElementById("items")
+      items.appendChild(item)
+      var btn = document.createElement("a-entity")
+      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+      btn.setAttribute("class", "eliminar")
+      btn.setAttribute("quitar13", "")
+      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+      items.appendChild(btn)
+    }else{
+      componente.setAttribute("value", texto)
+    }
   }
   })
 }
@@ -1027,24 +1053,26 @@ init: function () {
     var texto= "Biostar\t"+cont+"\t750Bs\t"+cont*750+" bs"
   console.log(texto);
   var componente=document.getElementById("Biostar")
-  if(componente == null){
-    var item = document.createElement('a-text')
-    item.setAttribute("value", texto)
-    item.setAttribute('class', 'items')
-    item.setAttribute("color", "#000000")
-    item.setAttribute("id", "Biostar")
-    item.setAttribute("width",0.9)
-    item.object3D.position.set(-0.3, -3, 1.4)
-    var items=document.getElementById("items")
-    items.appendChild(item)
-    var btn = document.createElement("a-entity")
-    btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-    btn.setAttribute("class", "eliminar")
-    btn.setAttribute("quitar14", "")
-    btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-    items.appendChild(btn)
-  }else{
-    componente.setAttribute("value", texto)
+  if(cont>0){
+    if(componente == null){
+      var item = document.createElement('a-text')
+      item.setAttribute("value", texto)
+      item.setAttribute('class', 'items')
+      item.setAttribute("color", "#000000")
+      item.setAttribute("id", "Biostar")
+      item.setAttribute("width",0.9)
+      item.object3D.position.set(-0.3, -3, 1.4)
+      var items=document.getElementById("items")
+      items.appendChild(item)
+      var btn = document.createElement("a-entity")
+      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+      btn.setAttribute("class", "eliminar")
+      btn.setAttribute("quitar14", "")
+      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+      items.appendChild(btn)
+    }else{
+      componente.setAttribute("value", texto)
+    }
   }
   })
 }
@@ -1099,24 +1127,26 @@ AFRAME.registerComponent('aumento15', {
       var texto= "Gygabite\t"+cont+"\t320Bs\t"+cont*320+" bs"
     console.log(texto);
     var componente=document.getElementById("Gygabite")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "Gygabite")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar15", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
+    if(cont>0){
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "Gygabite")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar15", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
     }
     })
   }
@@ -1170,24 +1200,26 @@ AFRAME.registerComponent('aumento15', {
       var texto= "RTX2080\t"+cont+"\t560Bs\t"+cont*560+" bs"
     console.log(texto);
     var componente=document.getElementById("RTX2080")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "RTX2080")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar16", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
+    if(cont>0){
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "RTX2080")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar16", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
     }
     })
   }
@@ -1241,6 +1273,7 @@ AFRAME.registerComponent('aumento15', {
           var texto= "RTX2070\t"+cont+"\t640Bs\t"+cont*640+" bs"
         console.log(texto);
         var componente=document.getElementById("RTX2070")
+       if(cont>0){
         if(componente == null){
           var item = document.createElement('a-text')
           item.setAttribute("value", texto)
@@ -1260,6 +1293,7 @@ AFRAME.registerComponent('aumento15', {
         }else{
           componente.setAttribute("value", texto)
         }
+       }
         })
       }
       })
@@ -1326,24 +1360,26 @@ AFRAME.registerComponent('aumento15', {
           var texto= "lenovo S540\t"+cont+"\t12000Bs\t"+cont*12000+" bs"
         console.log(texto);
         var componente=document.getElementById("lenovoS540")
-        if(componente == null){
-          var item = document.createElement('a-text')
-          item.setAttribute("value", texto)
-          item.setAttribute('class', 'items')
-          item.setAttribute("color", "#000000")
-          item.setAttribute("id", "lenovoS540")
-          item.setAttribute("width",0.9)
-          item.object3D.position.set(-0.3, -3, 1.4)
-          var items=document.getElementById("items")
-          items.appendChild(item)
-          var btn = document.createElement("a-entity")
-          btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-          btn.setAttribute("class", "eliminar")
-          btn.setAttribute("quitar18", "")
-          btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-          items.appendChild(btn)
-        }else{
-          componente.setAttribute("value", texto)
+        if(cont>0){
+          if(componente == null){
+            var item = document.createElement('a-text')
+            item.setAttribute("value", texto)
+            item.setAttribute('class', 'items')
+            item.setAttribute("color", "#000000")
+            item.setAttribute("id", "lenovoS540")
+            item.setAttribute("width",0.9)
+            item.object3D.position.set(-0.3, -3, 1.4)
+            var items=document.getElementById("items")
+            items.appendChild(item)
+            var btn = document.createElement("a-entity")
+            btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+            btn.setAttribute("class", "eliminar")
+            btn.setAttribute("quitar18", "")
+            btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+            items.appendChild(btn)
+          }else{
+            componente.setAttribute("value", texto)
+          }
         }
         })
     }
@@ -1397,24 +1433,26 @@ AFRAME.registerComponent('aumento15', {
         var texto= "Lenovo IDEA\t"+cont+"\t10650Bs\t"+cont*10650+" bs"
       console.log(texto);
       var componente=document.getElementById("LenovoIDEA")
-      if(componente == null){
-        var item = document.createElement('a-text')
-        item.setAttribute("value", texto)
-        item.setAttribute('class', 'items')
-        item.setAttribute("color", "#000000")
-        item.setAttribute("id", "LenovoIDEA")
-        item.setAttribute("width",0.9)
-        item.object3D.position.set(-0.3, -3, 1.4)
-        var items=document.getElementById("items")
-        items.appendChild(item)
-        var btn = document.createElement("a-entity")
-        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-        btn.setAttribute("class", "eliminar")
-        btn.setAttribute("quitar19", "")
-        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-        items.appendChild(btn)
-      }else{
-        componente.setAttribute("value", texto)
+      if(cont>0){
+        if(componente == null){
+          var item = document.createElement('a-text')
+          item.setAttribute("value", texto)
+          item.setAttribute('class', 'items')
+          item.setAttribute("color", "#000000")
+          item.setAttribute("id", "LenovoIDEA")
+          item.setAttribute("width",0.9)
+          item.object3D.position.set(-0.3, -3, 1.4)
+          var items=document.getElementById("items")
+          items.appendChild(item)
+          var btn = document.createElement("a-entity")
+          btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+          btn.setAttribute("class", "eliminar")
+          btn.setAttribute("quitar19", "")
+          btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+          items.appendChild(btn)
+        }else{
+          componente.setAttribute("value", texto)
+        }
       }
       })
   }
@@ -1468,24 +1506,26 @@ AFRAME.registerComponent('aumento15', {
         var texto= "Lenovo YOGA\t"+cont+"\t13050Bs\t"+cont*13050+" bs"
       console.log(texto);
       var componente=document.getElementById("LenovoYOGA")
-      if(componente == null){
-        var item = document.createElement('a-text')
-        item.setAttribute("value", texto)
-        item.setAttribute('class', 'items')
-        item.setAttribute("color", "#000000")
-        item.setAttribute("id", "LenovoYOGA")
-        item.setAttribute("width",0.9)
-        item.object3D.position.set(-0.3, -3, 1.4)
-        var items=document.getElementById("items")
-        items.appendChild(item)
-        var btn = document.createElement("a-entity")
-        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-        btn.setAttribute("class", "eliminar")
-        btn.setAttribute("quitar20", "")
-        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-        items.appendChild(btn)
-      }else{
-        componente.setAttribute("value", texto)
+      if(cont>0){
+        if(componente == null){
+          var item = document.createElement('a-text')
+          item.setAttribute("value", texto)
+          item.setAttribute('class', 'items')
+          item.setAttribute("color", "#000000")
+          item.setAttribute("id", "LenovoYOGA")
+          item.setAttribute("width",0.9)
+          item.object3D.position.set(-0.3, -3, 1.4)
+          var items=document.getElementById("items")
+          items.appendChild(item)
+          var btn = document.createElement("a-entity")
+          btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+          btn.setAttribute("class", "eliminar")
+          btn.setAttribute("quitar20", "")
+          btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+          items.appendChild(btn)
+        }else{
+          componente.setAttribute("value", texto)
+        }
       }
       })
   }
@@ -1539,24 +1579,26 @@ AFRAME.registerComponent('aumento15', {
         var texto= "HP Pavilion\t"+cont+"\t8600Bs\t"+cont*8600+" bs"
       console.log(texto);
       var componente=document.getElementById("HPPavilion")
-      if(componente == null){
-        var item = document.createElement('a-text')
-        item.setAttribute("value", texto)
-        item.setAttribute('class', 'items')
-        item.setAttribute("color", "#000000")
-        item.setAttribute("id", "HPPavilion")
-        item.setAttribute("width",0.9)
-        item.object3D.position.set(-0.3, -3, 1.4)
-        var items=document.getElementById("items")
-        items.appendChild(item)
-        var btn = document.createElement("a-entity")
-        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-        btn.setAttribute("class", "eliminar")
-        btn.setAttribute("quitar21", "")
-        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-        items.appendChild(btn)
-      }else{
-        componente.setAttribute("value", texto)
+      if(cont>0){
+        if(componente == null){
+          var item = document.createElement('a-text')
+          item.setAttribute("value", texto)
+          item.setAttribute('class', 'items')
+          item.setAttribute("color", "#000000")
+          item.setAttribute("id", "HPPavilion")
+          item.setAttribute("width",0.9)
+          item.object3D.position.set(-0.3, -3, 1.4)
+          var items=document.getElementById("items")
+          items.appendChild(item)
+          var btn = document.createElement("a-entity")
+          btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+          btn.setAttribute("class", "eliminar")
+          btn.setAttribute("quitar21", "")
+          btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+          items.appendChild(btn)
+        }else{
+          componente.setAttribute("value", texto)
+        }
       }
       })
   }
@@ -1610,24 +1652,26 @@ AFRAME.registerComponent('aumento15', {
       var texto= "Acer Aspire 3\t"+cont+"\t12300Bs\t"+cont*12300+" bs"
     console.log(texto);
     var componente=document.getElementById("AcerAspire3")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "AcerAspire3")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar22", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
+    if(cont>0){
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "AcerAspire3")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar22", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
     }
     })
   }
@@ -1681,24 +1725,26 @@ AFRAME.registerComponent('aumento15', {
       var texto= "MSI GF63 THIN\t"+cont+"\t9680Bs\t"+cont*9680+" bs"
     console.log(texto);
     var componente=document.getElementById("MSIGF63THIN")
-    if(componente == null){
-      var item = document.createElement('a-text')
-      item.setAttribute("value", texto)
-      item.setAttribute('class', 'items')
-      item.setAttribute("color", "#000000")
-      item.setAttribute("id", "MSIGF63THIN")
-      item.setAttribute("width",0.9)
-      item.object3D.position.set(-0.3, -3, 1.4)
-      var items=document.getElementById("items")
-      items.appendChild(item)
-      var btn = document.createElement("a-entity")
-      btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-      btn.setAttribute("class", "eliminar")
-      btn.setAttribute("quitar23", "")
-      btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-      items.appendChild(btn)
-    }else{
-      componente.setAttribute("value", texto)
+    if(cont>0){
+      if(componente == null){
+        var item = document.createElement('a-text')
+        item.setAttribute("value", texto)
+        item.setAttribute('class', 'items')
+        item.setAttribute("color", "#000000")
+        item.setAttribute("id", "MSIGF63THIN")
+        item.setAttribute("width",0.9)
+        item.object3D.position.set(-0.3, -3, 1.4)
+        var items=document.getElementById("items")
+        items.appendChild(item)
+        var btn = document.createElement("a-entity")
+        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+        btn.setAttribute("class", "eliminar")
+        btn.setAttribute("quitar23", "")
+        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+        items.appendChild(btn)
+      }else{
+        componente.setAttribute("value", texto)
+      }
     }
     })
   }
@@ -1753,24 +1799,26 @@ AFRAME.registerComponent('aumento15', {
         var texto= "Surface Pro 7\t"+cont+"\t10900Bs\t"+cont*10900+" bs"
       console.log(texto);
       var componente=document.getElementById("SurfacePro7")
-      if(componente == null){
-        var item = document.createElement('a-text')
-        item.setAttribute("value", texto)
-        item.setAttribute('class', 'items')
-        item.setAttribute("color", "#000000")
-        item.setAttribute("id", "SurfacePro7")
-        item.setAttribute("width",0.9)
-        item.object3D.position.set(-0.3, -3, 1.4)
-        var items=document.getElementById("items")
-        items.appendChild(item)
-        var btn = document.createElement("a-entity")
-        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-        btn.setAttribute("class", "eliminar")
-        btn.setAttribute("quitar24", "")
-        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-        items.appendChild(btn)
-      }else{
-        componente.setAttribute("value", texto)
+      if(cont>0){
+        if(componente == null){
+          var item = document.createElement('a-text')
+          item.setAttribute("value", texto)
+          item.setAttribute('class', 'items')
+          item.setAttribute("color", "#000000")
+          item.setAttribute("id", "SurfacePro7")
+          item.setAttribute("width",0.9)
+          item.object3D.position.set(-0.3, -3, 1.4)
+          var items=document.getElementById("items")
+          items.appendChild(item)
+          var btn = document.createElement("a-entity")
+          btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+          btn.setAttribute("class", "eliminar")
+          btn.setAttribute("quitar24", "")
+          btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+          items.appendChild(btn)
+        }else{
+          componente.setAttribute("value", texto)
+        }
       }
       })
     }
@@ -1824,24 +1872,26 @@ AFRAME.registerComponent('aumento15', {
         var texto= "Toshiba Porterge\t"+cont+"\t11620Bs\t"+cont*11620+" bs"
       console.log(texto);
       var componente=document.getElementById("ToshibaPorterge")
-      if(componente == null){
-        var item = document.createElement('a-text')
-        item.setAttribute("value", texto)
-        item.setAttribute('class', 'items')
-        item.setAttribute("color", "#000000")
-        item.setAttribute("id", "ToshibaPorterge")
-        item.setAttribute("width",0.9)
-        item.object3D.position.set(-0.3, -3, 1.4)
-        var items=document.getElementById("items")
-        items.appendChild(item)
-        var btn = document.createElement("a-entity")
-        btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-        btn.setAttribute("class", "eliminar")
-        btn.setAttribute("quitar25", "")
-        btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-        items.appendChild(btn)
-      }else{
-        componente.setAttribute("value", texto)
+      if(cont>0){
+        if(componente == null){
+          var item = document.createElement('a-text')
+          item.setAttribute("value", texto)
+          item.setAttribute('class', 'items')
+          item.setAttribute("color", "#000000")
+          item.setAttribute("id", "ToshibaPorterge")
+          item.setAttribute("width",0.9)
+          item.object3D.position.set(-0.3, -3, 1.4)
+          var items=document.getElementById("items")
+          items.appendChild(item)
+          var btn = document.createElement("a-entity")
+          btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+          btn.setAttribute("class", "eliminar")
+          btn.setAttribute("quitar25", "")
+          btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+          items.appendChild(btn)
+        }else{
+          componente.setAttribute("value", texto)
+        }
       }
       })
     }
@@ -1895,24 +1945,26 @@ AFRAME.registerComponent('aumento15', {
             var texto= "Matebook X Pro\t"+cont+"\t14500Bs\t"+cont*14500+" bs"
           console.log(texto);
           var componente=document.getElementById("MatebookXPro")
-          if(componente == null){
-            var item = document.createElement('a-text')
-            item.setAttribute("value", texto)
-            item.setAttribute('class', 'items')
-            item.setAttribute("color", "#000000")
-            item.setAttribute("id", "MatebookXPro")
-            item.setAttribute("width",0.9)
-            item.object3D.position.set(-0.3, -3, 1.4)
-            var items=document.getElementById("items")
-            items.appendChild(item)
-            var btn = document.createElement("a-entity")
-            btn.setAttribute("gltf-model","./modelos/menoslista.glb")
-            btn.setAttribute("class", "eliminar")
-            btn.setAttribute("quitar26", "")
-            btn.object3D.position.set(0.5,-3,1.4 ) //0.35
-            items.appendChild(btn)
-          }else{
-            componente.setAttribute("value", texto)
+          if(cont>0){
+            if(componente == null){
+              var item = document.createElement('a-text')
+              item.setAttribute("value", texto)
+              item.setAttribute('class', 'items')
+              item.setAttribute("color", "#000000")
+              item.setAttribute("id", "MatebookXPro")
+              item.setAttribute("width",0.9)
+              item.object3D.position.set(-0.3, -3, 1.4)
+              var items=document.getElementById("items")
+              items.appendChild(item)
+              var btn = document.createElement("a-entity")
+              btn.setAttribute("gltf-model","./modelos/menoslista.glb")
+              btn.setAttribute("class", "eliminar")
+              btn.setAttribute("quitar26", "")
+              btn.object3D.position.set(0.5,-3,1.4 ) //0.35
+              items.appendChild(btn)
+            }else{
+              componente.setAttribute("value", texto)
+            }
           }
           })
         }
@@ -1935,4 +1987,11 @@ AFRAME.registerComponent('aumento15', {
           })
         }
         })
+        AFRAME.registerComponent('salir', {
+          init: function () {
+            this.el.addEventListener('click', () => {
+              location.href="index.html"
+            })
+          }
+          })
   

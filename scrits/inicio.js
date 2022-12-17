@@ -1,11 +1,3 @@
-/*
-AFRAME.registerComponent('iniciar', {
-    init: function () {
-      this.el.addEventListener('click', function (evt) {
-            console.log("hola");
-      });
-    }
-  });*/
 
   var cerrarL = document.getElementById("closedL");
   var cerrarR = document.getElementById("closedR");
@@ -26,3 +18,15 @@ AFRAME.registerComponent('iniciar', {
   cerrarR.onclick=function(){
     registrarse.style.display="none"
   }
+  
+  var usuario=document.getElementById("usuario")
+var contraseña=document.getElementById("contraseña")
+var acceder=document.getElementById("acceder")
+
+acceder.onclick=function(){
+  if(contraseña.value=="admin" && usuario.value=="admin"){
+    location.href="menuadm.html"
+  }else{
+    location.href="tienda.html"
+  }
+}
