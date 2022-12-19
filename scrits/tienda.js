@@ -43,7 +43,7 @@ AFRAME.registerComponent('pedido', {
     init: function () {
       this.el.addEventListener('click', function (evt) {
           var cubo = document.getElementById('lista')
-          cubo.setAttribute('position', "0.2 -3 1.3");
+          cubo.setAttribute('position', "0.2 -5 1.3");
           var subtitulo = document.getElementById("subtitulo")
           subtitulo.setAttribute('position', "-0.3 -3 1.4")
           console.log(cubo);
@@ -1317,17 +1317,7 @@ AFRAME.registerComponent('aumento15', {
       })
 
 
-      AFRAME.registerComponent('enviar', {
-        init: function () {
-          this.el.addEventListener('click',() => {
-            var message = `Muy buenas quisiera adquirir el siguiente producto`;
-            message += `%0a%0a*Articulo:* Asus Zenbook`;
-            message += `%0a%0a*Unidad:* 1`;
-            message += `%0a%0a*Precio:* 1200`;
-            window.open(`https://api.whatsapp.com/send?phone=${60797901}&text=${message}`, '_system');
-          })
-        }
-      })
+
 
 
   //----------------------------------------------
@@ -1994,4 +1984,482 @@ AFRAME.registerComponent('aumento15', {
             })
           }
           })
+
+      AFRAME.registerComponent('enviar', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            /*var message = `Muy buenas quisiera adquirir el siguiente producto`;
+            message += `%0a%0a*Articulo:* Asus Zenbook`;
+            message += `%0a%0a*Unidad:* 1`;
+            message += `%0a%0a*Precio:* 1200`;
+            window.open(`https://api.whatsapp.com/send?phone=${60797901}&text=${message}`, '_system');*/
+            var items=document.getElementById("items")
+            var articulos=document.getElementsByClassName("items")
+            var lista=""
+            for(var i=0;i<articulos.length;i++){
+             lista+= articulos[i].getAttribute("value") + "\n"
+            }
+            console.log(lista);
+           items.innerHTML=""
+            total.setAttribute('value', "Total:\t\t\t\t\t\t 0 Bs")
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica1', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tZenbook S13\n\nMemoria: 1TB\n\nMemoria RAM: 16 GB\n\nBateria: 1500 MAh\n\nTarjeta de video: Redeon HD\n\nPrecio: 12000 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('closedc', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, -5, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            descripcion.setAttribute("value", "")
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica2', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tDell XPS 13\n\nMemoria: 1TB SSD\n\nMemoria RAM: 16 GB\n\nBateria: 2500 MAh\n\nLector FP\n\nPrecio: 10650 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica3', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tZephyrus G14\n\nMemoria: 1TB SSD\n\nMemoria RAM: 32 GB\n\nBateria: 2500 MAh\n\nTarjeta de video: Redeon RX 6800M\n\nPrecio: 13050 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+      AFRAME.registerComponent('caracteristica4', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tChromebook Duet3\n\nMemoria: 64 GB eMMc\n\nMemoria RAM: 4 GB\n\nBateria: 1200 MAh\n\nTarjeta de video: Redeon HD\n\nPrecio: 8600 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica5', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tThinkPad Z13\n\nMemoria: 256 GB M.2\n\nMemoria RAM: 16 GB\n\nBateria: 2200 MAh\n\nTarjeta de video: Integrada\n\nPrecio: 12300 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica6', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tMacBook Air M1\n\nMemoria: 256 GB SSD \n\nMemoria RAM: 16 GB\n\nBateria: 1500 MAh\n\nTarjeta de video: Redeon HD\n\nPrecio: 9680 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica7', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tSurface PRo 9\n\nMemoria: 512 SSD\n\nMemoria RAM: DDR4 16 GB\n\nBateria: 2400 MAh\n\nPrecio: 10900 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica8', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tRazer Blade 14\n\nMemoria: 1TB\n\nMemoria RAM: 32 GB\n\nBateria: 3000 MAh\n\nTarjeta de video: Redeon RX 6800M\n\nPrecio: 11620 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica9', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tLenovo s540\n\nMemoria: 256 TB SSD\n\nMemoria RAM: 8 GB\n\nBateria: 1500 MAh\n\nTarjeta de video: Integrada\n\nPrecio: 12000 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
   
+      AFRAME.registerComponent('caracteristica10', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tLenovo IdeaPAD\n\nMemoria: 1TB \n\nMemoria RAM: 12 GB\n\nBateria: 2500 MAh\n\nPrecio: 10650 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica11', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tLenovo YOGA 920\n\nMemoria: 1TB\n\nMemoria RAM: 16 GB\n\nProcesador: AMD Ryzen 7 PRO\n\nPrecio: 13050 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica12', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tHP Pavilion 360\n\nMemoria: 1TB SSD \n\nMemoria RAM: 32 GB\n\nBateria: 3500 MAh\n\nProcesador: Core i5\n\nPrecio: 8600 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica13', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tAcer Aspire 3\n\nMemoria: 512 GB SSD \n\nMemoria RAM: 16 GB\n\nBateria: 1500 MAh\n\nTarjeta de video: Redeon x8600M\n\nPrecio: 12300 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica14', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tMSI GF63 THIN\n\nMemoria: 1TB\n\nMemoria RAM: 8 GB\n\nBateria: 2500 MAh\n\nPrecio: 9680 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica15', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tSurface PRO7\n\nMemoria: 512 GB SSD\n\nMemoria RAM: 16 GB\n\nBateria: 1500 MAh\n\nPrecio: 10900 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica16', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tToshiba Proterge\n\nMemoria: 256 GB SSD\n\nMemoria RAM: 8 GB\n\nBateria: 1700 MAh\n\nPrecio: 11620 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica17', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tMacBook x PRO \n\nMemoria: 1TB\n\nMemoria RAM: 16 GB\n\nBateria: 3500 MAh\n\nPrecio: 14500 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica18', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tDIMM\n\nManejo de 32 y 64 bits\n\nCapacidad: 8 GB\n\nPrecio: 780 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica19', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tSIMMS\n\nVelocidad: 25 MHz\n\nCapacidad: 8 GB\n\nPrecio: 620 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+      AFRAME.registerComponent('caracteristica20', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tI5-PO58NG\n\nManejo de 32 y 64 bits\n\nCapacidad: 32 GB\n\nPrecio: 800 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica21', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tBIOSTAR\n\nManejo de 64 bits\n\nVelocidad: 30 MHz\n\nPrecio: 750 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica22', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tSCSI\n\nDimensiones: 150mm x 100mm\n\nCapacidad: 3500 MAh\n\nPrecio: 820 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica23', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tSerial ATA\n\nDimensiones: 150mm x 200mm\n\nCapacidad: 5500 MAh\n\nPrecio: 910 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica24', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tRTX 2070 Super\n\nDimensiones: 150mm x 100mm\n\nCapacidad: 4500 MAh\n\nPrecio: 640 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica25', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tRTX 2080ti\n\nDimensiones: 120mm x 150mm\n\nCapacidad: 2500 MAh\n\nPrecio: 560 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      AFRAME.registerComponent('caracteristica26', {
+        init: function () {
+          this.el.addEventListener('click',() => {
+            var cara= document.getElementById('caracteristicas')
+            cara.setAttribute('position', "0.2 -0.5 1.3");
+            var close= document.getElementById("closeC")
+            close.object3D.position.set(0.4, 0.6, 1.4)
+            var descripcion=document.getElementById("descripcion")
+            var contenido="\t\tGigabite\n\nDimensiones: 150mm x 100mm\n\nCapacidad: 1500 MAh\n\nPrecio: 320 Bs."
+            descripcion.setAttribute('position', "-0.3 0.4 1.4");
+            descripcion.setAttribute("value", contenido)
+            cerrado()
+          })
+        }
+      })
+
+      function cerrado(){
+        var cubo = document.getElementById('lista')
+        cubo.setAttribute('position', "0.2 -5 1.3");
+        var subtitulo = document.getElementById("subtitulo")
+        subtitulo.setAttribute('position', "-0.3 -3 1.4")
+        console.log(cubo);
+        var titulo = document.getElementById("titulo")
+        titulo.setAttribute('position', "-0.3 -3 1.4")
+        var items = document.getElementsByClassName("items")
+        var eliminar=document.getElementsByClassName("eliminar")
+        var pos=-3
+        for(var i=0; i<items.length; i++){
+          items[i].object3D.position.set(-0.3, pos, 1.4)
+        }
+        for(var i=0; i<eliminar.length; i++){
+          eliminar[i].object3D.position.set(-0.3, pos, 1.4)
+        }
+        var linea=document.getElementById("linea")
+        var total=document.getElementById("total")
+        linea.object3D.position.set(-0.3, -3, 1.4)
+        total.object3D.position.set(-0.3, -3, 1.4)
+        if(items.length==0){
+          var alerta= document.getElementById("alerta")
+          alerta.object3D.position.set(-0.3, -3, 1.4)
+        }
+        var close= document.getElementById("close")
+        var enviar= document.getElementById("enviar")
+        close.object3D.position.set(0.4, -3, 1.4)
+        enviar.object3D.position.set(0, -3, 1.4)
+      }
